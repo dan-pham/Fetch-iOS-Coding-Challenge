@@ -5,14 +5,18 @@
 //  Created by Dan Pham on 2/5/24.
 //
 
-struct Meal: Identifiable {
-    let id: String
-    let title: String
-    let thumbnailURL: String
+struct Meals: Decodable {
+    var meals: [Meal]
+}
+
+struct Meal: Identifiable, Decodable {
+    var id: String
+    var title: String
+    var thumbnailURL: String
     
-    init(id: String, title: String, thumbnailURL: String) {
-        self.id = id
-        self.title = title
-        self.thumbnailURL = thumbnailURL
+    enum CodingKeys: String, CodingKey {
+        case id = "idMeal"
+        case title = "strMeal"
+        case thumbnailURL = "strMealThumb"
     }
 }

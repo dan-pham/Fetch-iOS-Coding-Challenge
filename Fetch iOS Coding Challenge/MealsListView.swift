@@ -22,6 +22,9 @@ struct MealsListView: View {
             .scrollContentBackground(.hidden)
             .navigationTitle(Text("Desserts"))
         }
+        .task {
+            await viewModel.loadMealsData()
+        }
     }
 }
 

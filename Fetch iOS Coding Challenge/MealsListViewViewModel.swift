@@ -10,7 +10,29 @@ import Foundation
 extension MealsListView {
     @Observable
     class ViewModel {
-        let meals: [Meal] = SampleData.meals
+        var meals: [Meal] = SampleData.meals
+        
+        func loadMealsData() async {
+            guard let url = URL(string: TheMealDBEndpoints.dessertCategory.rawValue) else {
+                fatalError("The dessert category URL is not valid")
+            }
+            
+            do {
+                let (data, _) = try await URLSession.shared.data(from: url)
+                
+                if let decodedResponse = try? JSONDecoder().decode(Meals.self, from: data) {
+                    meals = decodedResponse.meals
+                }
+            } catch let error {
+                print("Error retrieving data from TheMealDB: \(error.localizedDescription)")
+            }
+        }
+    }
+}
+
+extension MealsListView {
+    private enum TheMealDBEndpoints: String {
+        case dessertCategory = "https://themealdb.com/api/json/v1/1/filter.php?c=Dessert"
     }
 }
 
