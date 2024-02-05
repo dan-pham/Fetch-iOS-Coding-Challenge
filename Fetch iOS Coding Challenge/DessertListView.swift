@@ -10,12 +10,12 @@ import SwiftUI
 struct DessertItem: Identifiable {
     let id: String
     let title: String
-    let thumbnail: String
+    let thumbnailURL: String
     
-    init(id: String, title: String, thumbnail: String) {
+    init(id: String, title: String, thumbnailURL: String) {
         self.id = id
         self.title = title
-        self.thumbnail = thumbnail
+        self.thumbnailURL = thumbnailURL
     }
 }
 
@@ -46,9 +46,9 @@ extension DessertListView {
     @Observable
     class ViewModel {
         let dessertItems: [DessertItem] = [
-            DessertItem(id: "52893", title: "Apple & Blackberry Crumble", thumbnail: "https://www.themealdb.com/images/media/meals/xvsurr1511719182.jpg"),
-            DessertItem(id: "52768", title: "Apple Frangipan Tart", thumbnail: "https://www.themealdb.com/images/media/meals/wxywrq1468235067.jpg"),
-            DessertItem(id: "52855", title: "Banana Pancakes", thumbnail: "https://www.themealdb.com/images/media/meals/sywswr1511383814.jpg")
+            DessertItem(id: "52893", title: "Apple & Blackberry Crumble", thumbnailURL: "https://www.themealdb.com/images/media/meals/xvsurr1511719182.jpg"),
+            DessertItem(id: "52768", title: "Apple Frangipan Tart", thumbnailURL: "https://www.themealdb.com/images/media/meals/wxywrq1468235067.jpg"),
+            DessertItem(id: "52855", title: "Banana Pancakes", thumbnailURL: "https://www.themealdb.com/images/media/meals/sywswr1511383814.jpg")
         ]
     }
 }
@@ -59,9 +59,7 @@ struct DessertListCellView: View {
     var body: some View {
         VStack(alignment: .leading) {
             HStack(spacing: 16) {
-                Color.gray
-                    .frame(width: 64, height: 64)
-                    .clipShape(RoundedRectangle(cornerRadius: 8))
+                DessertItemThumbnail(thumbnailURL: dessertItem.thumbnailURL)
                 
                 Text(dessertItem.title)
                     .fontWeight(.medium)
@@ -73,5 +71,35 @@ struct DessertListCellView: View {
         .background(.white)
         .clipShape(RoundedRectangle(cornerRadius: 16))
         .shadow(color: Color(uiColor: .lightGray), radius: 2, x: 1, y: 1)
+    }
+}
+
+struct DessertItemThumbnail: View {
+    let thumbnailURL: String
+    
+    var body: some View {
+        AsyncImage(url: URL(string: thumbnailURL)) { phase in
+            switch phase {
+            case .success(let image):
+                image.resizable()
+                
+            case .failure:
+                ImagePlaceholder()
+                
+            case .empty:
+                ProgressView()
+                
+            @unknown default:
+                ImagePlaceholder()
+            }
+        }
+        .frame(width: 64, height: 64)
+        .clipShape(RoundedRectangle(cornerRadius: 8))
+    }
+}
+
+struct ImagePlaceholder: View {
+    var body: some View {
+        Color.gray
     }
 }
