@@ -11,6 +11,7 @@
 		C391ABD22B6CB8F2004E7CC6 /* MealsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C391ABD12B6CB8F2004E7CC6 /* MealsListView.swift */; };
 		C391ABD42B6CB8F4004E7CC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C391ABD32B6CB8F4004E7CC6 /* Assets.xcassets */; };
 		C391ABD72B6CB8F4004E7CC6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C391ABD62B6CB8F4004E7CC6 /* Preview Assets.xcassets */; };
+		C3C207642B718D0400040BD4 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C207632B718D0400040BD4 /* Meal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		C391ABD12B6CB8F2004E7CC6 /* MealsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsListView.swift; sourceTree = "<group>"; };
 		C391ABD32B6CB8F4004E7CC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C391ABD62B6CB8F4004E7CC6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C3C207632B718D0400040BD4 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				C391ABCF2B6CB8F2004E7CC6 /* Fetch_iOS_Coding_ChallengeApp.swift */,
 				C391ABD12B6CB8F2004E7CC6 /* MealsListView.swift */,
+				C3C207632B718D0400040BD4 /* Meal.swift */,
 				C391ABD32B6CB8F4004E7CC6 /* Assets.xcassets */,
 				C391ABD52B6CB8F4004E7CC6 /* Preview Content */,
 			);
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C391ABD22B6CB8F2004E7CC6 /* MealsListView.swift in Sources */,
+				C3C207642B718D0400040BD4 /* Meal.swift in Sources */,
 				C391ABD02B6CB8F2004E7CC6 /* Fetch_iOS_Coding_ChallengeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

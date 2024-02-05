@@ -7,18 +7,6 @@
 
 import SwiftUI
 
-struct Meal: Identifiable {
-    let id: String
-    let title: String
-    let thumbnailURL: String
-    
-    init(id: String, title: String, thumbnailURL: String) {
-        self.id = id
-        self.title = title
-        self.thumbnailURL = thumbnailURL
-    }
-}
-
 struct MealsListView: View {
     
     @State private var viewModel = ViewModel()
