@@ -21,16 +21,12 @@ struct DessertItem: Identifiable {
 
 struct DessertListView: View {
     
-    let dessertItems: [DessertItem] = [
-        DessertItem(id: "52893", title: "Apple & Blackberry Crumble", thumbnail: "https://www.themealdb.com/images/media/meals/xvsurr1511719182.jpg"),
-        DessertItem(id: "52768", title: "Apple Frangipan Tart", thumbnail: "https://www.themealdb.com/images/media/meals/wxywrq1468235067.jpg"),
-        DessertItem(id: "52855", title: "Banana Pancakes", thumbnail: "https://www.themealdb.com/images/media/meals/sywswr1511383814.jpg")
-    ]
+    @State private var viewModel = ViewModel()
     
     var body: some View {
         NavigationStack {
             List {
-                ForEach(dessertItems) { dessertItem in
+                ForEach(viewModel.dessertItems) { dessertItem in
                     DessertListCellView(dessertItem: dessertItem)
                 }
                 .listRowSeparator(.hidden)
@@ -43,6 +39,18 @@ struct DessertListView: View {
 
 #Preview {
     DessertListView()
+}
+
+
+extension DessertListView {
+    @Observable
+    class ViewModel {
+        let dessertItems: [DessertItem] = [
+            DessertItem(id: "52893", title: "Apple & Blackberry Crumble", thumbnail: "https://www.themealdb.com/images/media/meals/xvsurr1511719182.jpg"),
+            DessertItem(id: "52768", title: "Apple Frangipan Tart", thumbnail: "https://www.themealdb.com/images/media/meals/wxywrq1468235067.jpg"),
+            DessertItem(id: "52855", title: "Banana Pancakes", thumbnail: "https://www.themealdb.com/images/media/meals/sywswr1511383814.jpg")
+        ]
+    }
 }
 
 struct DessertListCellView: View {
