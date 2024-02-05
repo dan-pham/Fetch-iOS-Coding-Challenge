@@ -9,7 +9,7 @@ struct Meals: Decodable {
     var meals: [Meal]
 }
 
-struct Meal: Identifiable, Decodable {
+struct Meal: Identifiable, Decodable, Comparable {
     var id: String
     var title: String
     var thumbnailURL: String
@@ -18,5 +18,9 @@ struct Meal: Identifiable, Decodable {
         case id = "idMeal"
         case title = "strMeal"
         case thumbnailURL = "strMealThumb"
+    }
+    
+    static func < (lhs: Meal, rhs: Meal) -> Bool {
+        lhs.title < rhs.title
     }
 }

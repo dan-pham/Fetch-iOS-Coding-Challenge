@@ -21,7 +21,7 @@ extension MealsListView {
                 let (data, _) = try await URLSession.shared.data(from: url)
                 
                 if let decodedResponse = try? JSONDecoder().decode(Meals.self, from: data) {
-                    meals = decodedResponse.meals
+                    meals = decodedResponse.meals.sorted()
                 }
             } catch let error {
                 print("Error retrieving data from TheMealDB: \(error.localizedDescription)")
