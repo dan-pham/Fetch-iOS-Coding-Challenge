@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C391ABD02B6CB8F2004E7CC6 /* Fetch_iOS_Coding_ChallengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C391ABCF2B6CB8F2004E7CC6 /* Fetch_iOS_Coding_ChallengeApp.swift */; };
-		C391ABD22B6CB8F2004E7CC6 /* DessertListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C391ABD12B6CB8F2004E7CC6 /* DessertListView.swift */; };
+		C391ABD22B6CB8F2004E7CC6 /* MealsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C391ABD12B6CB8F2004E7CC6 /* MealsListView.swift */; };
 		C391ABD42B6CB8F4004E7CC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C391ABD32B6CB8F4004E7CC6 /* Assets.xcassets */; };
 		C391ABD72B6CB8F4004E7CC6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C391ABD62B6CB8F4004E7CC6 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -16,7 +16,7 @@
 /* Begin PBXFileReference section */
 		C391ABCC2B6CB8F2004E7CC6 /* Fetch iOS Coding Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fetch iOS Coding Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C391ABCF2B6CB8F2004E7CC6 /* Fetch_iOS_Coding_ChallengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fetch_iOS_Coding_ChallengeApp.swift; sourceTree = "<group>"; };
-		C391ABD12B6CB8F2004E7CC6 /* DessertListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertListView.swift; sourceTree = "<group>"; };
+		C391ABD12B6CB8F2004E7CC6 /* MealsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsListView.swift; sourceTree = "<group>"; };
 		C391ABD32B6CB8F4004E7CC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C391ABD62B6CB8F4004E7CC6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -52,7 +52,7 @@
 			isa = PBXGroup;
 			children = (
 				C391ABCF2B6CB8F2004E7CC6 /* Fetch_iOS_Coding_ChallengeApp.swift */,
-				C391ABD12B6CB8F2004E7CC6 /* DessertListView.swift */,
+				C391ABD12B6CB8F2004E7CC6 /* MealsListView.swift */,
 				C391ABD32B6CB8F4004E7CC6 /* Assets.xcassets */,
 				C391ABD52B6CB8F4004E7CC6 /* Preview Content */,
 			);
@@ -137,7 +137,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C391ABD22B6CB8F2004E7CC6 /* DessertListView.swift in Sources */,
+				C391ABD22B6CB8F2004E7CC6 /* MealsListView.swift in Sources */,
 				C391ABD02B6CB8F2004E7CC6 /* Fetch_iOS_Coding_ChallengeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
