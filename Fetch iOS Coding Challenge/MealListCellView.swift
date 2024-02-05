@@ -14,6 +14,8 @@ struct MealListCellView: View {
         VStack(alignment: .leading) {
             HStack(spacing: 16) {
                 MealThumbnail(thumbnailURL: meal.thumbnailURL)
+                    .frame(width: 64, height: 64)
+                    .clipShape(RoundedRectangle(cornerRadius: 8))
                 
                 Text(meal.title)
                     .fontWeight(.medium)

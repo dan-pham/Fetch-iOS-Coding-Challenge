@@ -26,8 +26,6 @@ struct MealThumbnail: View {
                 ImagePlaceholder()
             }
         }
-        .frame(width: 64, height: 64)
-        .clipShape(RoundedRectangle(cornerRadius: 8))
     }
 }
 
