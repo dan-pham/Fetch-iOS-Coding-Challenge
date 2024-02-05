@@ -50,33 +50,3 @@ struct MealListCellView: View {
         .shadow(color: Color(uiColor: .lightGray), radius: 2, x: 1, y: 1)
     }
 }
-
-struct MealThumbnail: View {
-    let thumbnailURL: String
-    
-    var body: some View {
-        AsyncImage(url: URL(string: thumbnailURL)) { phase in
-            switch phase {
-            case .success(let image):
-                image.resizable()
-                
-            case .failure:
-                ImagePlaceholder()
-                
-            case .empty:
-                ProgressView()
-                
-            @unknown default:
-                ImagePlaceholder()
-            }
-        }
-        .frame(width: 64, height: 64)
-        .clipShape(RoundedRectangle(cornerRadius: 8))
-    }
-}
-
-struct ImagePlaceholder: View {
-    var body: some View {
-        Color.gray
-    }
-}

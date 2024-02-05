@@ -13,6 +13,7 @@
 		C391ABD72B6CB8F4004E7CC6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C391ABD62B6CB8F4004E7CC6 /* Preview Assets.xcassets */; };
 		C3C207642B718D0400040BD4 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C207632B718D0400040BD4 /* Meal.swift */; };
 		C3C207662B718DF400040BD4 /* MealsListViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C207652B718DF400040BD4 /* MealsListViewViewModel.swift */; };
+		C3C207682B718EA500040BD4 /* MealThumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C207672B718EA500040BD4 /* MealThumbnail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		C391ABD62B6CB8F4004E7CC6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C3C207632B718D0400040BD4 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		C3C207652B718DF400040BD4 /* MealsListViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsListViewViewModel.swift; sourceTree = "<group>"; };
+		C3C207672B718EA500040BD4 /* MealThumbnail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealThumbnail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 			children = (
 				C391ABCF2B6CB8F2004E7CC6 /* Fetch_iOS_Coding_ChallengeApp.swift */,
 				C391ABD12B6CB8F2004E7CC6 /* MealsListView.swift */,
+				C3C207672B718EA500040BD4 /* MealThumbnail.swift */,
 				C3C207652B718DF400040BD4 /* MealsListViewViewModel.swift */,
 				C3C207632B718D0400040BD4 /* Meal.swift */,
 				C391ABD32B6CB8F4004E7CC6 /* Assets.xcassets */,
@@ -145,6 +148,7 @@
 			files = (
 				C3C207662B718DF400040BD4 /* MealsListViewViewModel.swift in Sources */,
 				C391ABD22B6CB8F2004E7CC6 /* MealsListView.swift in Sources */,
+				C3C207682B718EA500040BD4 /* MealThumbnail.swift in Sources */,
 				C3C207642B718D0400040BD4 /* Meal.swift in Sources */,
 				C391ABD02B6CB8F2004E7CC6 /* Fetch_iOS_Coding_ChallengeApp.swift in Sources */,
 			);
