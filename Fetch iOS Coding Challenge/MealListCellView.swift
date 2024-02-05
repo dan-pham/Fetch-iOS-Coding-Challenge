@@ -29,5 +29,5 @@ struct MealListCellView: View {
 }
 
 #Preview {
-    MealListCellView(meal: Meal(id: "52893", title: "Apple & Blackberry Crumble", thumbnailURL: "https://www.themealdb.com/images/media/meals/xvsurr1511719182.jpg"))
+    MealListCellView(meal: SampleData.meal)
 }
