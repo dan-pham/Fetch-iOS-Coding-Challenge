@@ -15,6 +15,7 @@
 		C3C207662B718DF400040BD4 /* MealsListViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C207652B718DF400040BD4 /* MealsListViewViewModel.swift */; };
 		C3C207682B718EA500040BD4 /* MealThumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C207672B718EA500040BD4 /* MealThumbnail.swift */; };
 		C3C2076A2B718FAE00040BD4 /* MealListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C207692B718FAE00040BD4 /* MealListCellView.swift */; };
+		C3C2076C2B71A44000040BD4 /* MealDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C2076B2B71A44000040BD4 /* MealDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		C3C207652B718DF400040BD4 /* MealsListViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsListViewViewModel.swift; sourceTree = "<group>"; };
 		C3C207672B718EA500040BD4 /* MealThumbnail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealThumbnail.swift; sourceTree = "<group>"; };
 		C3C207692B718FAE00040BD4 /* MealListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealListCellView.swift; sourceTree = "<group>"; };
+		C3C2076B2B71A44000040BD4 /* MealDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 			children = (
 				C391ABCF2B6CB8F2004E7CC6 /* Fetch_iOS_Coding_ChallengeApp.swift */,
 				C391ABD12B6CB8F2004E7CC6 /* MealsListView.swift */,
+				C3C2076B2B71A44000040BD4 /* MealDetailView.swift */,
 				C3C207692B718FAE00040BD4 /* MealListCellView.swift */,
 				C3C207672B718EA500040BD4 /* MealThumbnail.swift */,
 				C3C207652B718DF400040BD4 /* MealsListViewViewModel.swift */,
@@ -153,6 +156,7 @@
 				C391ABD22B6CB8F2004E7CC6 /* MealsListView.swift in Sources */,
 				C3C207682B718EA500040BD4 /* MealThumbnail.swift in Sources */,
 				C3C2076A2B718FAE00040BD4 /* MealListCellView.swift in Sources */,
+				C3C2076C2B71A44000040BD4 /* MealDetailView.swift in Sources */,
 				C3C207642B718D0400040BD4 /* Meal.swift in Sources */,
 				C391ABD02B6CB8F2004E7CC6 /* Fetch_iOS_Coding_ChallengeApp.swift in Sources */,
 			);
