@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C33E5C162B72ED24008AC789 /* MealDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33E5C152B72ED24008AC789 /* MealDetailViewModel.swift */; };
 		C391ABD02B6CB8F2004E7CC6 /* Fetch_iOS_Coding_ChallengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C391ABCF2B6CB8F2004E7CC6 /* Fetch_iOS_Coding_ChallengeApp.swift */; };
 		C391ABD22B6CB8F2004E7CC6 /* MealsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C391ABD12B6CB8F2004E7CC6 /* MealsListView.swift */; };
 		C391ABD42B6CB8F4004E7CC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C391ABD32B6CB8F4004E7CC6 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C33E5C152B72ED24008AC789 /* MealDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailViewModel.swift; sourceTree = "<group>"; };
 		C391ABCC2B6CB8F2004E7CC6 /* Fetch iOS Coding Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fetch iOS Coding Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C391ABCF2B6CB8F2004E7CC6 /* Fetch_iOS_Coding_ChallengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fetch_iOS_Coding_ChallengeApp.swift; sourceTree = "<group>"; };
 		C391ABD12B6CB8F2004E7CC6 /* MealsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsListView.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 		C33E5C142B72EA5E008AC789 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				C33E5C152B72ED24008AC789 /* MealDetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 				C3C2076C2B71A44000040BD4 /* MealDetailView.swift in Sources */,
 				C3C2076E2B71B49B00040BD4 /* MealDetail.swift in Sources */,
 				C3C207642B718D0400040BD4 /* Meal.swift in Sources */,
+				C33E5C162B72ED24008AC789 /* MealDetailViewModel.swift in Sources */,
 				C391ABD02B6CB8F2004E7CC6 /* Fetch_iOS_Coding_ChallengeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

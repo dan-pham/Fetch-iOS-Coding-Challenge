@@ -9,7 +9,7 @@ struct MealsDetail: Decodable {
     var meals: [MealDetail]
 }
 
-struct MealDetail: Decodable {
+struct MealDetail {
     let id: String
     let title: String
     let drinkAlternate: String?
@@ -66,7 +66,9 @@ struct MealDetail: Decodable {
     let imageSourceURL: String?
     let creativeCommonsConfirmed: String?
     let dateModified: String?
-    
+}
+
+extension MealDetail: Decodable {
     enum CodingKeys: String, CodingKey {
         case id = "idMeal"
         case title = "strMeal"
