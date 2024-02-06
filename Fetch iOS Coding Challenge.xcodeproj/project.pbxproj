@@ -44,6 +44,90 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C33E5C0B2B72E9A4008AC789 /* Meal Detail */ = {
+			isa = PBXGroup;
+			children = (
+				C33E5C132B72EA3B008AC789 /* Model */,
+				C33E5C122B72EA33008AC789 /* View */,
+				C33E5C142B72EA5E008AC789 /* ViewModel */,
+			);
+			path = "Meal Detail";
+			sourceTree = "<group>";
+		};
+		C33E5C0C2B72E9B1008AC789 /* Meal List */ = {
+			isa = PBXGroup;
+			children = (
+				C33E5C112B72EA18008AC789 /* Model */,
+				C33E5C0F2B72E9F5008AC789 /* View */,
+				C33E5C102B72EA08008AC789 /* ViewModel */,
+			);
+			path = "Meal List";
+			sourceTree = "<group>";
+		};
+		C33E5C0D2B72E9D8008AC789 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				C33E5C0E2B72E9E9008AC789 /* View */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		C33E5C0E2B72E9E9008AC789 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C3C207672B718EA500040BD4 /* MealThumbnail.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C33E5C0F2B72E9F5008AC789 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C391ABD12B6CB8F2004E7CC6 /* MealsListView.swift */,
+				C3C207692B718FAE00040BD4 /* MealListCellView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C33E5C102B72EA08008AC789 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C3C207652B718DF400040BD4 /* MealsListViewViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C33E5C112B72EA18008AC789 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C3C207632B718D0400040BD4 /* Meal.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C33E5C122B72EA33008AC789 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C3C2076B2B71A44000040BD4 /* MealDetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C33E5C132B72EA3B008AC789 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C3C2076D2B71B49B00040BD4 /* MealDetail.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C33E5C142B72EA5E008AC789 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		C391ABC32B6CB8F2004E7CC6 = {
 			isa = PBXGroup;
 			children = (
@@ -64,13 +148,9 @@
 			isa = PBXGroup;
 			children = (
 				C391ABCF2B6CB8F2004E7CC6 /* Fetch_iOS_Coding_ChallengeApp.swift */,
-				C391ABD12B6CB8F2004E7CC6 /* MealsListView.swift */,
-				C3C2076B2B71A44000040BD4 /* MealDetailView.swift */,
-				C3C207692B718FAE00040BD4 /* MealListCellView.swift */,
-				C3C207672B718EA500040BD4 /* MealThumbnail.swift */,
-				C3C207652B718DF400040BD4 /* MealsListViewViewModel.swift */,
-				C3C207632B718D0400040BD4 /* Meal.swift */,
-				C3C2076D2B71B49B00040BD4 /* MealDetail.swift */,
+				C33E5C0D2B72E9D8008AC789 /* Shared */,
+				C33E5C0C2B72E9B1008AC789 /* Meal List */,
+				C33E5C0B2B72E9A4008AC789 /* Meal Detail */,
 				C391ABD32B6CB8F4004E7CC6 /* Assets.xcassets */,
 				C391ABD52B6CB8F4004E7CC6 /* Preview Content */,
 			);
