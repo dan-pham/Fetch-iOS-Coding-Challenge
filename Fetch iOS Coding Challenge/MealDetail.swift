@@ -5,7 +5,11 @@
 //  Created by Dan Pham on 2/5/24.
 //
 
-struct MealDetail {
+struct MealsDetail: Decodable {
+    var meals: [MealDetail]
+}
+
+struct MealDetail: Decodable {
     let id: String
     let title: String
     let drinkAlternate: String

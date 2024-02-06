@@ -30,11 +30,12 @@ extension MealsListView {
     }
 }
 
-extension MealsListView {
-    private enum TheMealDBEndpoints: String {
-        case dessertCategory = "https://themealdb.com/api/json/v1/1/filter.php?c=Dessert"
-    }
+
+enum TheMealDBEndpoints: String {
+    case dessertCategory = "https://themealdb.com/api/json/v1/1/filter.php?c=Dessert"
+    case fetchMealDetail = "https://themealdb.com/api/json/v1/1/lookup.php?i="
 }
+
 
 struct SampleData {
     static let meal = Meal(id: "52893", title: "Apple & Blackberry Crumble", thumbnailURL: "https://www.themealdb.com/images/media/meals/xvsurr1511719182.jpg")
