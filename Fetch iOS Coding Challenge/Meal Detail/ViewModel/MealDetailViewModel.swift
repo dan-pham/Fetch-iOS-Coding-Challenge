@@ -56,9 +56,21 @@ extension MealDetailView {
             let numberOfIngredients = allIngredients.count
             
             for index in 0..<numberOfIngredients {
-                let composedIngredient = "• " + allMeasurements[index].trimmingCharacters(in: .whitespaces) + " " + allIngredients[index].lowercased().trimmingCharacters(in: .whitespaces)
+                let composedIngredient = "• " + formattedMeasurement(for: allMeasurements[index]) + " " + formattedIngredient(for: allIngredients[index])
                 composedIngredients.append(composedIngredient)
             }
+        }
+        
+        private func formattedMeasurement(for measurement: String) -> String {
+            var measurement = measurement.trimmingCharacters(in: .whitespaces)
+            let firstCharacter = measurement.first!
+            measurement = firstCharacter.isLetter ? measurement.capitalized : measurement.lowercased()
+            return measurement
+        }
+        
+        private func formattedIngredient(for ingredient: String) -> String {
+            var ingredient = ingredient.lowercased().trimmingCharacters(in: .whitespaces)
+            return ingredient
         }
     }
 }
