@@ -16,11 +16,15 @@ struct InstructionsView: View {
                 Text("Instructions")
                     .font(.title3)
                 
-                Text(instructions)
+                Text(formatInstructions(for: instructions))
             }
             .padding()
             .frame(maxWidth: .infinity, alignment: .leading)
         }
+    }
+    
+    private func formatInstructions(for instructions: String) -> String {
+        instructions.replacingOccurrences(of: "\n", with: "\n\n")
     }
 }
 
