@@ -14,6 +14,7 @@ struct IngredientsView: View {
         VStack(alignment: .leading) {
             Text("Ingredients")
                 .font(.title3)
+                .padding(.bottom, 16)
             
             ForEach(composedIngredients, id: \.self) { ingredient in
                 Text(ingredient)

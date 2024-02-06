@@ -15,6 +15,7 @@ struct InstructionsView: View {
             VStack(alignment: .leading) {
                 Text("Instructions")
                     .font(.title3)
+                    .padding(.bottom, 16)
                 
                 Text(formatInstructions(for: instructions))
             }
