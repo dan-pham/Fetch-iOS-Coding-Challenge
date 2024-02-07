@@ -14,10 +14,28 @@ struct HeaderView: View {
         MealThumbnail(thumbnailURL: meal.thumbnailURL)
             .frame(height: 400)
         
-        Text(meal.title)
-            .font(.title2)
-            .padding()
-            .frame(maxWidth: .infinity, alignment: .leading)
+        VStack(alignment: .leading) {
+            Text(meal.title)
+                .font(.title2)
+            
+            Text(formatDescription(category: meal.category, area: meal.area))
+                .font(.headline)
+        }
+        .padding()
+        .frame(maxWidth: .infinity, alignment: .leading)
+    }
+    
+    private func formatDescription(category: String?, area: String?) -> String {
+        switch (category, area) {
+        case let (category?, area?):
+            return "\(category) | \(area)"
+        case let (category?, _):
+            return category
+        case let (_, area?):
+            return area
+        case (.none, .none):
+            return ""
+        }
     }
 }
 
