@@ -18,6 +18,7 @@ struct HeaderView: View {
             VStack(alignment: .leading) {
                 Text(meal.title)
                     .font(.title2)
+                    .fontWeight(.bold)
                 
                 Text(formatDescription(category: meal.category, area: meal.area))
                     .font(.headline)
