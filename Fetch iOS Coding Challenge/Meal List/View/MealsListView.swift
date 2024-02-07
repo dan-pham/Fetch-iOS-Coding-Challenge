@@ -14,17 +14,8 @@ struct MealsListView: View {
     var body: some View {
         NavigationStack {
             List(viewModel.meals) { meal in
-                ZStack {
-                    NavigationLink {
-                        MealDetailView(mealID: meal.id)
-                    } label: {
-                        EmptyView()
-                    }
-                    
-                    MealListCellView(meal: meal)
-                }
-                .listRowSeparator(.hidden)
-                
+                MealDetailNavigationView(meal: meal)
+                    .listRowSeparator(.hidden)
             }
             .scrollContentBackground(.hidden)
             .navigationTitle(Text("Desserts"))
