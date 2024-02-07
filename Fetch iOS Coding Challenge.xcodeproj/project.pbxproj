@@ -11,6 +11,8 @@
 		C33E5C182B72F3B5008AC789 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33E5C172B72F3B5008AC789 /* HeaderView.swift */; };
 		C33E5C1A2B72F41E008AC789 /* IngredientsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33E5C192B72F41E008AC789 /* IngredientsView.swift */; };
 		C33E5C1C2B72F427008AC789 /* InstructionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33E5C1B2B72F427008AC789 /* InstructionsView.swift */; };
+		C33E5C1E2B7301B1008AC789 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33E5C1D2B7301B1008AC789 /* SampleData.swift */; };
+		C33E5C202B7301EB008AC789 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33E5C1F2B7301EB008AC789 /* Endpoints.swift */; };
 		C391ABD02B6CB8F2004E7CC6 /* Fetch_iOS_Coding_ChallengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C391ABCF2B6CB8F2004E7CC6 /* Fetch_iOS_Coding_ChallengeApp.swift */; };
 		C391ABD22B6CB8F2004E7CC6 /* MealsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C391ABD12B6CB8F2004E7CC6 /* MealsListView.swift */; };
 		C391ABD42B6CB8F4004E7CC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C391ABD32B6CB8F4004E7CC6 /* Assets.xcassets */; };
@@ -28,6 +30,8 @@
 		C33E5C172B72F3B5008AC789 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		C33E5C192B72F41E008AC789 /* IngredientsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsView.swift; sourceTree = "<group>"; };
 		C33E5C1B2B72F427008AC789 /* InstructionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsView.swift; sourceTree = "<group>"; };
+		C33E5C1D2B7301B1008AC789 /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
+		C33E5C1F2B7301EB008AC789 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
 		C391ABCC2B6CB8F2004E7CC6 /* Fetch iOS Coding Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fetch iOS Coding Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C391ABCF2B6CB8F2004E7CC6 /* Fetch_iOS_Coding_ChallengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fetch_iOS_Coding_ChallengeApp.swift; sourceTree = "<group>"; };
 		C391ABD12B6CB8F2004E7CC6 /* MealsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsListView.swift; sourceTree = "<group>"; };
@@ -76,6 +80,8 @@
 			isa = PBXGroup;
 			children = (
 				C33E5C0E2B72E9E9008AC789 /* View */,
+				C33E5C212B730236008AC789 /* Sample Data */,
+				C33E5C222B730274008AC789 /* Endpoints */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -138,6 +144,22 @@
 				C33E5C152B72ED24008AC789 /* MealDetailViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C33E5C212B730236008AC789 /* Sample Data */ = {
+			isa = PBXGroup;
+			children = (
+				C33E5C1D2B7301B1008AC789 /* SampleData.swift */,
+			);
+			path = "Sample Data";
+			sourceTree = "<group>";
+		};
+		C33E5C222B730274008AC789 /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				C33E5C1F2B7301EB008AC789 /* Endpoints.swift */,
+			);
+			path = Endpoints;
 			sourceTree = "<group>";
 		};
 		C391ABC32B6CB8F2004E7CC6 = {
@@ -257,6 +279,8 @@
 				C33E5C182B72F3B5008AC789 /* HeaderView.swift in Sources */,
 				C3C2076E2B71B49B00040BD4 /* MealDetail.swift in Sources */,
 				C3C207642B718D0400040BD4 /* Meal.swift in Sources */,
+				C33E5C202B7301EB008AC789 /* Endpoints.swift in Sources */,
+				C33E5C1E2B7301B1008AC789 /* SampleData.swift in Sources */,
 				C33E5C162B72ED24008AC789 /* MealDetailViewModel.swift in Sources */,
 				C391ABD02B6CB8F2004E7CC6 /* Fetch_iOS_Coding_ChallengeApp.swift in Sources */,
 			);
