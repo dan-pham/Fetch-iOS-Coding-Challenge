@@ -14,12 +14,16 @@ struct MealsListView: View {
     
     var body: some View {
         NavigationStack {
-            List(viewModel.meals) { meal in
-                MealDetailNavigationView(meal: meal)
-                    .listRowSeparator(.hidden)
+            if !viewModel.meals.isEmpty {
+                List(viewModel.meals) { meal in
+                    MealDetailNavigationView(meal: meal)
+                        .listRowSeparator(.hidden)
+                }
+                .scrollContentBackground(.hidden)
+                .navigationTitle(Text("Desserts"))
+            } else {
+                ProgressView()
             }
-            .scrollContentBackground(.hidden)
-            .navigationTitle(Text("Desserts"))
         }
         .task {
             await viewModel.loadMealsData()
