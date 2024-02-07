@@ -30,10 +30,8 @@ extension MealDetailView {
             do {
                 let (data, _) = try await URLSession.shared.data(from: url)
                 
-                if let decodedResponse = try? JSONDecoder().decode(MealsDetail.self, from: data){
-                    if let mealDetail = decodedResponse.meals.first {
-                        meal = mealDetail
-                    }
+                if let decodedResponse = try? JSONDecoder().decode(MealsDetail.self, from: data), let mealDetail = decodedResponse.meals.first {
+                    meal = mealDetail
                 }
             } catch let error {
                 errorMessage = error.localizedDescription
