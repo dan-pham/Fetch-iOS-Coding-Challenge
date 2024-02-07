@@ -47,20 +47,22 @@ extension MealDetailView {
                 meal.measurement6, meal.measurement7, meal.measurement8, meal.measurement9, meal.measurement10,
                 meal.measurement11, meal.measurement12, meal.measurement13, meal.measurement14, meal.measurement15,
                 meal.measurement16, meal.measurement17, meal.measurement18, meal.measurement19, meal.measurement20
-            ].compactMap { $0 }.filter { !$0.isEmpty }
+            ].compactMap { $0?.trimmingCharacters(in: .whitespaces) }.filter { !$0.isEmpty }
             
             let allIngredients = [
                 meal.ingredient1, meal.ingredient2, meal.ingredient3, meal.ingredient4, meal.ingredient5,
                 meal.ingredient6, meal.ingredient7, meal.ingredient8, meal.ingredient9, meal.ingredient10,
                 meal.ingredient11, meal.ingredient12, meal.ingredient13, meal.ingredient14, meal.ingredient15,
                 meal.ingredient16, meal.ingredient17, meal.ingredient18, meal.ingredient19, meal.ingredient20
-            ].compactMap { $0 }.filter { !$0.isEmpty }
+            ].compactMap { $0?.trimmingCharacters(in: .whitespaces) }.filter { !$0.isEmpty }
             
             let numberOfIngredients = allIngredients.count
             
             for index in 0..<numberOfIngredients {
                 let composedIngredient = "• " + formattedMeasurement(for: allMeasurements[index]) + " " + formattedIngredient(for: allIngredients[index])
-                composedIngredients.append(composedIngredient)
+                if !composedIngredients.contains(composedIngredient) {
+                    composedIngredients.append(composedIngredient)
+                }
             }
         }
         
