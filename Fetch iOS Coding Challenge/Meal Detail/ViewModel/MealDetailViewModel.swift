@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Observation
 
 extension MealDetailView {
     @Observable
@@ -18,6 +19,8 @@ extension MealDetailView {
             }
         }
         private(set) var composedIngredients = [String]()
+        private(set) var errorMessage = String()
+        var showingAlert = false
         
         func loadMealDetailData(for id: String) async {
             let mealDetailURL = URL(string: TheMealDBEndpoints.fetchMealDetail.rawValue + id)
@@ -35,7 +38,8 @@ extension MealDetailView {
                     }
                 }
             } catch let error {
-                print("Error retrieving data from TheMealDB: \(error.localizedDescription)")
+                errorMessage = error.localizedDescription
+                showingAlert = true
             }
         }
         

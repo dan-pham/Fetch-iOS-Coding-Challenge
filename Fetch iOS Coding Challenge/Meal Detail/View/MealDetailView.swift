@@ -6,10 +6,11 @@
 //
 
 import SwiftUI
+import Observation
 
 struct MealDetailView: View {
     
-    private let viewModel = ViewModel()
+    @Bindable private var viewModel = ViewModel()
     
     let mealID: String
     
@@ -33,6 +34,7 @@ struct MealDetailView: View {
         .task {
             await viewModel.loadMealDetailData(for: mealID)
         }
+        .alert(viewModel.errorMessage, isPresented: $viewModel.showingAlert) { }
     }
 }
 
