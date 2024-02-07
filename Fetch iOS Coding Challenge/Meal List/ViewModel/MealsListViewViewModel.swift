@@ -6,11 +6,14 @@
 //
 
 import Foundation
+import Observation
 
 extension MealsListView {
     @Observable
     final class ViewModel {
         private(set) var meals = [Meal]()
+        private(set) var errorMessage = String()
+        var showingAlert = false
         
         func loadMealsData() async {
             guard let url = URL(string: TheMealDBEndpoints.dessertCategory.rawValue) else {
@@ -24,7 +27,8 @@ extension MealsListView {
                     meals = decodedResponse.meals.sorted()
                 }
             } catch let error {
-                print("Error retrieving data from TheMealDB: \(error.localizedDescription)")
+                errorMessage = error.localizedDescription
+                showingAlert = true
             }
         }
     }

@@ -6,10 +6,11 @@
 //
 
 import SwiftUI
+import Observation
 
 struct MealsListView: View {
     
-    private let viewModel = ViewModel()
+    @Bindable private var viewModel = ViewModel()
     
     var body: some View {
         NavigationStack {
@@ -23,6 +24,7 @@ struct MealsListView: View {
         .task {
             await viewModel.loadMealsData()
         }
+        .alert(viewModel.errorMessage, isPresented: $viewModel.showingAlert) { }
     }
 }
 
