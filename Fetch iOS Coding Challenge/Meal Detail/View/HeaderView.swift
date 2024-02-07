@@ -24,7 +24,13 @@ struct HeaderView: View {
         .padding()
         .frame(maxWidth: .infinity, alignment: .leading)
     }
-    
+}
+
+#Preview {
+    HeaderView(meal: SampleData.mealDetail)
+}
+
+extension HeaderView {
     private func formatDescription(category: String?, area: String?) -> String {
         switch (category, area) {
         case let (category?, area?):
@@ -37,8 +43,4 @@ struct HeaderView: View {
             return ""
         }
     }
-}
-
-#Preview {
-    HeaderView(meal: SampleData.mealDetail)
 }

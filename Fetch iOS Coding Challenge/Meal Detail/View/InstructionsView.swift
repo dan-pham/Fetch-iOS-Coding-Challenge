@@ -23,12 +23,14 @@ struct InstructionsView: View {
             .frame(maxWidth: .infinity, alignment: .leading)
         }
     }
-    
-    private func formatInstructions(for instructions: String) -> String {
-        instructions.replacingOccurrences(of: "\n", with: "\n\n")
-    }
 }
 
 #Preview {
     InstructionsView(instructions: SampleData.mealDetail.instructions)
+}
+
+extension InstructionsView {
+    private func formatInstructions(for instructions: String) -> String {
+        instructions.replacingOccurrences(of: "\n", with: "\n\n")
+    }
 }
