@@ -13,9 +13,7 @@ extension MealDetailView {
     final class ViewModel {
         private(set) var meal: MealDetail? = nil {
             didSet {
-                if let meal = meal {
-                    composeIngredientList(meal: meal)
-                }
+                composeIngredientList(meal: meal)
             }
         }
         private(set) var composedIngredients = [String]()
@@ -43,7 +41,9 @@ extension MealDetailView {
             }
         }
         
-        func composeIngredientList(meal: MealDetail) {
+        func composeIngredientList(meal: MealDetail?) {
+            guard let meal = meal else { return }
+            
             let allMeasurements = [
                 meal.measurement1, meal.measurement2, meal.measurement3, meal.measurement4, meal.measurement5,
                 meal.measurement6, meal.measurement7, meal.measurement8, meal.measurement9, meal.measurement10,
