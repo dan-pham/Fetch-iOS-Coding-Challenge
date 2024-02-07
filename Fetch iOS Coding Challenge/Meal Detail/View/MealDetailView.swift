@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MealDetailView: View {
     
-    @ObservedObject var viewModel = ViewModel()
+    private let viewModel = ViewModel()
     
     let mealID: String
     

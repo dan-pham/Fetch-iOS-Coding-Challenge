@@ -9,8 +9,8 @@ import Foundation
 
 extension MealsListView {
     @Observable
-    class ViewModel {
-        var meals: [Meal] = SampleData.meals
+    final class ViewModel {
+        private(set) var meals = [Meal]()
         
         func loadMealsData() async {
             guard let url = URL(string: TheMealDBEndpoints.dessertCategory.rawValue) else {

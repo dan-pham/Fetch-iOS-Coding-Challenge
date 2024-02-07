@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MealsListView: View {
     
-    @State private var viewModel = ViewModel()
+    private let viewModel = ViewModel()
     
     var body: some View {
         NavigationStack {

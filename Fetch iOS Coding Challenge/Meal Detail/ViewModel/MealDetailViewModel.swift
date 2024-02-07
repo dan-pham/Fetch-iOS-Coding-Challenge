@@ -8,15 +8,16 @@
 import Foundation
 
 extension MealDetailView {
-    final class ViewModel: ObservableObject {
-        @Published var meal: MealDetail? = nil {
+    @Observable
+    final class ViewModel {
+        private(set) var meal: MealDetail? = nil {
             didSet {
                 if let meal = meal {
                     composeIngredientList(meal: meal)
                 }
             }
         }
-        @Published var composedIngredients = [String]()
+        private(set) var composedIngredients = [String]()
         
         func loadMealDetailData(for id: String) async {
             let mealDetailURL = URL(string: TheMealDBEndpoints.fetchMealDetail.rawValue + id)
@@ -69,7 +70,7 @@ extension MealDetailView {
         }
         
         private func formattedIngredient(for ingredient: String) -> String {
-            var ingredient = ingredient.lowercased().trimmingCharacters(in: .whitespaces)
+            let ingredient = ingredient.lowercased().trimmingCharacters(in: .whitespaces)
             return ingredient
         }
     }
