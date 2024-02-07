@@ -21,16 +21,20 @@ struct MealDetailView: View {
     var body: some View {
         ScrollView {
             if let meal = viewModel.meal {
-                HeaderView(meal: meal)
-                
-                IngredientsView(composedIngredients: viewModel.composedIngredients)
-                
-                InstructionsView(instructions: meal.instructions)
+                VStack(spacing: 16) {
+                    HeaderView(meal: meal)
+                    
+                    IngredientsView(composedIngredients: viewModel.composedIngredients)
+                    
+                    InstructionsView(instructions: meal.instructions)
+                }
             } else {
                 ProgressView()
                     .padding(.top, 200)
+                    .frame(maxWidth: .infinity)
             }
         }
+        .background(.offWhite)
         .task {
             await viewModel.loadMealDetailData(for: mealID)
         }

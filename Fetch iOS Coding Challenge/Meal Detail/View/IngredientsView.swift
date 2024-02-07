@@ -22,6 +22,7 @@ struct IngredientsView: View {
         }
         .padding()
         .frame(maxWidth: .infinity, alignment: .leading)
+        .background(.white)
     }
 }
 

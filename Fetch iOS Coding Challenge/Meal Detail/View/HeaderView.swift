@@ -11,18 +11,21 @@ struct HeaderView: View {
     let meal: MealDetail
     
     var body: some View {
-        MealThumbnail(thumbnailURL: meal.thumbnailURL)
-            .frame(height: 400)
-        
-        VStack(alignment: .leading) {
-            Text(meal.title)
-                .font(.title2)
+        VStack {
+            MealThumbnail(thumbnailURL: meal.thumbnailURL)
+                .frame(height: 400)
             
-            Text(formatDescription(category: meal.category, area: meal.area))
-                .font(.headline)
+            VStack(alignment: .leading) {
+                Text(meal.title)
+                    .font(.title2)
+                
+                Text(formatDescription(category: meal.category, area: meal.area))
+                    .font(.headline)
+            }
+            .padding()
+            .frame(maxWidth: .infinity, alignment: .leading)
         }
-        .padding()
-        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(.white)
     }
 }
 
