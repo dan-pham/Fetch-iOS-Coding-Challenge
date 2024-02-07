@@ -34,6 +34,7 @@ struct MealDetailView: View {
                     .frame(maxWidth: .infinity)
             }
         }
+        .navigationBarTitleDisplayMode(.inline)
         .background(.offWhite)
         .task {
             await viewModel.loadMealDetailData(for: mealID)
