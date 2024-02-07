@@ -12,9 +12,15 @@ struct IngredientsView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text("Ingredients")
-                .font(.title3)
-                .padding(.bottom, 16)
+            HStack(alignment: .center) {
+                Image(systemName: "checkmark.circle.fill")
+                    .foregroundStyle(.mint)
+                
+                Text("Ingredients")
+                    .bold()
+            }
+            .font(.title3)
+            .padding(.bottom, 8)
             
             ForEach(composedIngredients, id: \.self) { ingredient in
                 Text(ingredient)

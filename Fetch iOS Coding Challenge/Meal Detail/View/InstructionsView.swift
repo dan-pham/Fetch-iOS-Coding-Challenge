@@ -13,9 +13,15 @@ struct InstructionsView: View {
     var body: some View {
         if let instructions = instructions {
             VStack(alignment: .leading) {
-                Text("Instructions")
-                    .font(.title3)
-                    .padding(.bottom, 16)
+                HStack(alignment: .center) {
+                    Image(systemName: "list.clipboard.fill")
+                        .foregroundStyle(.mint)
+                    
+                    Text("Instructions")
+                        .bold()
+                }
+                .font(.title3)
+                .padding(.bottom, 8)
                 
                 Text(formatInstructions(for: instructions))
             }
