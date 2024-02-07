@@ -12,7 +12,6 @@ struct HeaderView: View {
     
     var body: some View {
         MealThumbnail(thumbnailURL: meal.thumbnailURL)
-            .scaledToFill()
             .frame(height: 400)
         
         Text(meal.title)

@@ -14,7 +14,9 @@ struct MealThumbnail: View {
         AsyncImage(url: URL(string: thumbnailURL)) { phase in
             switch phase {
             case .success(let image):
-                image.resizable()
+                image
+                    .resizable()
+                    .scaledToFill()
                 
             case .failure:
                 ImagePlaceholder()
