@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct IngredientsView: View {
-    let composedIngredients: [String]
+    let ingredients: [String]
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -22,7 +22,7 @@ struct IngredientsView: View {
             .font(.title3)
             .padding(.bottom, 8)
             
-            ForEach(composedIngredients, id: \.self) { ingredient in
+            ForEach(ingredients, id: \.self) { ingredient in
                 Text(ingredient)
             }
         }
@@ -33,7 +33,5 @@ struct IngredientsView: View {
 }
 
 #Preview {
-    let viewModel = MealDetailView.ViewModel()
-    viewModel.composeIngredientList(meal: SampleData.mealDetail)
-    return IngredientsView(composedIngredients: viewModel.composedIngredients)
+    IngredientsView(ingredients: SampleData.mealDetail.ingredients)
 }

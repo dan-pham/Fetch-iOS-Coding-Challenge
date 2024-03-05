@@ -10,7 +10,7 @@ import Observation
 
 struct MealsListView: View {
     
-    @Bindable private var viewModel = ViewModel()
+    @State private var viewModel = MealsListViewModel()
     
     var body: some View {
         NavigationStack {

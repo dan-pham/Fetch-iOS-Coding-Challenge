@@ -10,7 +10,7 @@ import Observation
 
 struct MealDetailView: View {
     
-    @Bindable private var viewModel = ViewModel()
+    @Bindable private var viewModel = MealDetailViewModel()
     
     let mealID: String
     
@@ -24,7 +24,7 @@ struct MealDetailView: View {
                 VStack(spacing: 16) {
                     HeaderView(meal: meal)
                     
-                    IngredientsView(composedIngredients: viewModel.composedIngredients)
+                    IngredientsView(ingredients: meal.ingredients)
                     
                     InstructionsView(instructions: meal.instructions)
                 }
